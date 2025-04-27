@@ -1,5 +1,13 @@
 package Leader_Election_Bully;
 
+//        How Does It Work?
+//        1.	Each process has a unique ID.
+//        2.	When a process notices the coordinator (leader) has failed, it starts an election.
+//        3.	The process sends an ELECTION message to all processes with higher IDs.
+//        4.	If no higher-ID process responds, it becomes the new coordinator and sends a COORDINATOR message to all.
+//        5.	If any higher-ID process responds, that process takes over the election and repeats the steps.
+//        6.	Eventually, the highest-ID process becomes the coordinator.
+
 import java.util.*;
 
 class Process {
