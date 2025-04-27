@@ -1,5 +1,12 @@
 package Leader_Election_Token_Ring;
 
+//        •	All processes are arranged in a logical ring (circular structure).
+//        •	Each process knows only its successor in the ring.
+//        •	A special message called a token is passed from one process to the next.
+//        •	The election is initiated by any process when it detects the leader is missing or failed.
+//        •	The token is used to collect IDs of all active processes.
+//        •	The process with the highest ID becomes the leader.
+
 import java.util.*;
 
 class Process {
