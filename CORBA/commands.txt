@@ -1,0 +1,22 @@
+tnameserv -ORBInitialPort 1050
+
+javac *.java StringModule/*.java
+
+java StringServer -ORBInitialPort 1050 -ORBInitialHost localhost
+java StringClient -ORBInitialPort 1050 -ORBInitialHost localhost
+
+
+
+
+
+Server:
+
+idlj -fall ReverseModule.idl
+javac *.java ReverseModule/*.java
+orbd -ORBInitialPort 1050&
+java ReverseServer -ORBInitialPort 1050& -ORBInitialHost localhost&
+
+Client:
+
+java ReverseClient -ORBInitialPort 1050 -ORBInitialHost localhost&
+
