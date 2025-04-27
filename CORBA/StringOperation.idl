@@ -1,0 +1,6 @@
+module StringModule {
+    interface StringOperation {
+        string reverseString(in string input);
+        string uppercaseString(in string input);
+    };
+};
